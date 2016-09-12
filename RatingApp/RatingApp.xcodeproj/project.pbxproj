@@ -15,6 +15,7 @@
 		28E3BDC81D852BDA003BF2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E3BDC61D852BDA003BF2EC /* LaunchScreen.storyboard */; };
 		28E3BDD31D852BDA003BF2EC /* RatingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDD21D852BDA003BF2EC /* RatingAppTests.swift */; };
 		28E3BDDE1D852BDA003BF2EC /* RatingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDDD1D852BDA003BF2EC /* RatingAppUITests.swift */; };
+		28E3BDEC1D853087003BF2EC /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDEB1D853087003BF2EC /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		28E3BDD91D852BDA003BF2EC /* RatingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E3BDDD1D852BDA003BF2EC /* RatingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingAppUITests.swift; sourceTree = "<group>"; };
 		28E3BDDF1D852BDA003BF2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E3BDEB1D853087003BF2EC /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */,
 				28E3BDBC1D852BD9003BF2EC /* ViewController.swift */,
 				28E3BDBE1D852BD9003BF2EC /* Main.storyboard */,
+				28E3BDEB1D853087003BF2EC /* MealTableViewCell.swift */,
 				28E3BDC41D852BD9003BF2EC /* Assets.xcassets */,
 				28E3BDC61D852BDA003BF2EC /* LaunchScreen.storyboard */,
 				28E3BDC91D852BDA003BF2EC /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E3BDEC1D853087003BF2EC /* MealTableViewCell.swift in Sources */,
 				28E3BDC31D852BD9003BF2EC /* RatingApp.xcdatamodeld in Sources */,
 				28E3BDBD1D852BD9003BF2EC /* ViewController.swift in Sources */,
 				28E3BDBB1D852BD9003BF2EC /* AppDelegate.swift in Sources */,
