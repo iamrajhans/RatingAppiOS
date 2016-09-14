@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288EF6891D87348A005A02B9 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EF6881D87348A005A02B9 /* MealTableViewController.swift */; };
 		28E3BDBB1D852BD9003BF2EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */; };
 		28E3BDBD1D852BD9003BF2EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDBC1D852BD9003BF2EC /* ViewController.swift */; };
 		28E3BDC01D852BD9003BF2EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E3BDBE1D852BD9003BF2EC /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		288EF6881D87348A005A02B9 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		28E3BDB71D852BD9003BF2EC /* RatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28E3BDBC1D852BD9003BF2EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */,
+				288EF6881D87348A005A02B9 /* MealTableViewController.swift */,
 				28E3BDBC1D852BD9003BF2EC /* ViewController.swift */,
 				28E3BDBE1D852BD9003BF2EC /* Main.storyboard */,
 				28E3BDEB1D853087003BF2EC /* MealTableViewCell.swift */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288EF6891D87348A005A02B9 /* MealTableViewController.swift in Sources */,
 				28E3BDEC1D853087003BF2EC /* MealTableViewCell.swift in Sources */,
 				28E3BDC31D852BD9003BF2EC /* RatingApp.xcdatamodeld in Sources */,
 				28E3BDBD1D852BD9003BF2EC /* ViewController.swift in Sources */,
@@ -490,6 +494,7 @@
 				28E3BDE41D852BDA003BF2EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28E3BDE51D852BDA003BF2EC /* Build configuration list for PBXNativeTarget "RatingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				28E3BDE71D852BDA003BF2EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28E3BDE81D852BDA003BF2EC /* Build configuration list for PBXNativeTarget "RatingAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +512,7 @@
 				28E3BDEA1D852BDA003BF2EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
