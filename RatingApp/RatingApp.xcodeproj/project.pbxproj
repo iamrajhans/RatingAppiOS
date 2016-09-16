@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282C39061D8C68DA00ED4DDB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C39051D8C68DA00ED4DDB /* Meal.swift */; };
 		288EF6891D87348A005A02B9 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EF6881D87348A005A02B9 /* MealTableViewController.swift */; };
 		28E3BDBB1D852BD9003BF2EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */; };
 		28E3BDBD1D852BD9003BF2EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3BDBC1D852BD9003BF2EC /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282C39051D8C68DA00ED4DDB /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		288EF6881D87348A005A02B9 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		28E3BDB71D852BD9003BF2EC /* RatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				28E3BDBA1D852BD9003BF2EC /* AppDelegate.swift */,
 				288EF6881D87348A005A02B9 /* MealTableViewController.swift */,
 				28E3BDBC1D852BD9003BF2EC /* ViewController.swift */,
+				282C39051D8C68DA00ED4DDB /* Meal.swift */,
 				28E3BDBE1D852BD9003BF2EC /* Main.storyboard */,
 				28E3BDEB1D853087003BF2EC /* MealTableViewCell.swift */,
 				28E3BDC41D852BD9003BF2EC /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				28E3BDEC1D853087003BF2EC /* MealTableViewCell.swift in Sources */,
 				28E3BDC31D852BD9003BF2EC /* RatingApp.xcdatamodeld in Sources */,
 				28E3BDBD1D852BD9003BF2EC /* ViewController.swift in Sources */,
+				282C39061D8C68DA00ED4DDB /* Meal.swift in Sources */,
 				28E3BDBB1D852BD9003BF2EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

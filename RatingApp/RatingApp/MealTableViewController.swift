@@ -10,10 +10,27 @@ import UIKit
 
 class MealTableViewController: UITableViewController {
 
-    var meal = [MealTableViewCell]()
+    var meals = [Meal]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadSampleMealData()
+        
+    }
+    
+    func loadSampleMealData(){
+        let photo1 = UIImage(named: "meal1")!
+        let meal1 = Meal(name: "Salad", photo: photo1, rating: 4)!
+        
+        let photo2 = UIImage(named: "meal2")!
+        let meal2 = Meal(name: "chicken", photo: photo2, rating: 3)!
+        
+        let photo3 = UIImage(named: "meal3")!
+        let meal3 = Meal(name: "Pasta", photo: photo3, rating: 4)!
+        
+        
+        meals += [meal1,meal2,meal3]
+        
         
     }
 
@@ -26,23 +43,28 @@ class MealTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return meals.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellidentifier = "mealCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellidentifier, forIndexPath: indexPath) as! MealTableViewCell
 
+        let meal = meals[indexPath.row]
+        
+        cell.mealNameLabel.text = meal.name
+        cell.mealImage.image = meal.photo
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
