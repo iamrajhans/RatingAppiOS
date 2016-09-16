@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Meals-->
@@ -14,27 +15,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mealCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="90" id="Myh-2A-hBq" customClass="MealTableViewCell" customModule="RatingApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mealCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="mealCell" rowHeight="90" id="Myh-2A-hBq" customClass="MealTableViewCell" customModule="RatingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myh-2A-hBq" id="GPT-lB-lUM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-F2-ZfY">
-                                            <rect key="frame" x="135" y="8" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-F2-ZfY">
+                                            <rect key="frame" x="145" y="8" width="52" height="26"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-ve-Gd4" customClass="RatingControl">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-ve-Gd4" customClass="RatingControl">
                                             <rect key="frame" x="135" y="37" width="240" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="gL0-z6-ftm">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="gL0-z6-ftm">
                                             <rect key="frame" x="19" y="8" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="ydO-SX-Rti"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e1A-ve-Gd4" firstAttribute="top" secondItem="b6y-F2-ZfY" secondAttribute="bottom" constant="3" id="424-4n-0lz"/>
+                                        <constraint firstItem="gL0-z6-ftm" firstAttribute="top" secondItem="b6y-F2-ZfY" secondAttribute="top" id="5Nh-uu-eVZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="e1A-ve-Gd4" secondAttribute="trailing" constant="225" id="6Yh-1w-niq"/>
+                                        <constraint firstItem="gL0-z6-ftm" firstAttribute="leading" secondItem="GPT-lB-lUM" secondAttribute="leadingMargin" constant="11" id="98O-Pw-yUz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gL0-z6-ftm" secondAttribute="bottom" constant="-7" id="Sy1-gI-Z2R"/>
+                                        <constraint firstItem="b6y-F2-ZfY" firstAttribute="leading" secondItem="gL0-z6-ftm" secondAttribute="trailing" constant="46" id="UaZ-3w-OHa"/>
+                                        <constraint firstItem="e1A-ve-Gd4" firstAttribute="leading" secondItem="gL0-z6-ftm" secondAttribute="trailing" constant="36" id="XUd-t4-r22"/>
+                                        <constraint firstItem="gL0-z6-ftm" firstAttribute="top" secondItem="GPT-lB-lUM" secondAttribute="topMargin" id="a7h-ob-gmZ"/>
+                                        <constraint firstItem="e1A-ve-Gd4" firstAttribute="bottom" secondItem="GPT-lB-lUM" secondAttribute="bottomMargin" id="tYL-bd-BgT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="mealImage" destination="gL0-z6-ftm" id="J2g-OR-zql"/>
