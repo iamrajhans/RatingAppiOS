@@ -94,17 +94,43 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btO-yv-ZEu">
                                 <rect key="frame" x="150" y="110" width="300" height="300"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="Lsf-PO-8se"/>
+                                </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-g8-86f">
+                                <rect key="frame" x="256" y="453" width="88" height="30"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPicFromphotolib:" destination="a9B-BN-5as" eventType="touchUpInside" id="ASA-kT-HO4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="m47-z0-XdJ" secondAttribute="trailing" id="Fnd-nF-lWH"/>
                             <constraint firstItem="m47-z0-XdJ" firstAttribute="top" secondItem="MDm-nC-sCe" secondAttribute="bottom" constant="8" id="Y0A-Xm-E0G"/>
                             <constraint firstAttribute="leadingMargin" secondItem="m47-z0-XdJ" secondAttribute="leading" id="y23-Zo-18b"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="hn2-EI-W1P"/>
+                            <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="P8C-7e-5ff"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="mealImageView" destination="btO-yv-ZEu" id="HcK-PW-b6f"/>
+                        <outlet property="mealNameTextField" destination="m47-z0-XdJ" id="EVT-5w-CB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Wz-KF-ioN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="orG-XO-CSO">
+                    <connections>
+                        <action selector="selectImageFromPhotolibrary:" destination="a9B-BN-5as" id="P4i-pU-NkJ"/>
+                        <outlet property="delegate" destination="She-cF-1Ab" id="qDS-Ma-eWk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2893" y="380"/>
         </scene>
