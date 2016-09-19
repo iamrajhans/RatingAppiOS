@@ -25,7 +25,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-F2-ZfY">
                                             <rect key="frame" x="145" y="8" width="52" height="26"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-ve-Gd4" customClass="RatingControl">
@@ -92,14 +92,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btO-yv-ZEu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="btO-yv-ZEu">
                                 <rect key="frame" x="150" y="110" width="300" height="300"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ob8-BS-dBE"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="Lsf-PO-8se"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-g8-86f">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-g8-86f">
                                 <rect key="frame" x="256" y="453" width="88" height="30"/>
                                 <state key="normal" title="Select Photo"/>
                                 <connections>
@@ -110,9 +113,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="m47-z0-XdJ" secondAttribute="trailing" id="Fnd-nF-lWH"/>
-                            <constraint firstItem="m47-z0-XdJ" firstAttribute="top" secondItem="MDm-nC-sCe" secondAttribute="bottom" constant="8" id="Y0A-Xm-E0G"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="m47-z0-XdJ" secondAttribute="leading" id="y23-Zo-18b"/>
+                            <constraint firstItem="mVn-g8-86f" firstAttribute="top" secondItem="btO-yv-ZEu" secondAttribute="bottom" constant="43" id="4VP-z2-YOq"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="top" secondItem="MDm-nC-sCe" secondAttribute="bottom" constant="8" symbolic="YES" id="BXh-Hj-8Q9"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="centerX" secondItem="btO-yv-ZEu" secondAttribute="centerX" id="F00-aH-hSi"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="trailing" secondItem="She-cF-1Ab" secondAttribute="trailingMargin" id="WgE-Kh-Z3s"/>
+                            <constraint firstItem="mVn-g8-86f" firstAttribute="leading" secondItem="She-cF-1Ab" secondAttribute="leadingMargin" constant="236" id="aF3-X3-pzW"/>
+                            <constraint firstItem="RMw-1w-fbD" firstAttribute="top" secondItem="mVn-g8-86f" secondAttribute="bottom" constant="117" id="cwR-Sy-XqY"/>
+                            <constraint firstItem="btO-yv-ZEu" firstAttribute="top" secondItem="m47-z0-XdJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fah-H8-fV8"/>
+                            <constraint firstItem="mVn-g8-86f" firstAttribute="top" secondItem="btO-yv-ZEu" secondAttribute="bottom" constant="43" id="krD-Au-FSR"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="leading" secondItem="She-cF-1Ab" secondAttribute="leadingMargin" id="x4d-3n-32W"/>
+                            <constraint firstItem="btO-yv-ZEu" firstAttribute="centerX" secondItem="mVn-g8-86f" secondAttribute="centerX" id="xEL-xk-LDn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mVn-g8-86f" secondAttribute="trailing" constant="236" id="yjm-Ac-67Q"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="hn2-EI-W1P"/>
