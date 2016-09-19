@@ -65,7 +65,7 @@
                     <navigationItem key="navigationItem" title="Meals" id="ZeI-UP-tQW">
                         <barButtonItem key="rightBarButtonItem" title="+" id="zrr-W2-xJZ">
                             <connections>
-                                <segue destination="ozT-Kl-qyA" kind="show" id="18h-fy-NXU"/>
+                                <segue destination="vhZ-LI-45T" kind="show" id="18h-fy-NXU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +96,7 @@
                                 <rect key="frame" x="150" y="110" width="300" height="300"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Ob8-BS-dBE"/>
+                                    <constraint firstAttribute="width" constant="300" id="oJR-bs-Opz"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="Lsf-PO-8se"/>
@@ -113,33 +113,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="mVn-g8-86f" firstAttribute="top" secondItem="btO-yv-ZEu" secondAttribute="bottom" constant="43" id="4VP-z2-YOq"/>
-                            <constraint firstItem="m47-z0-XdJ" firstAttribute="top" secondItem="MDm-nC-sCe" secondAttribute="bottom" constant="8" symbolic="YES" id="BXh-Hj-8Q9"/>
-                            <constraint firstItem="m47-z0-XdJ" firstAttribute="centerX" secondItem="btO-yv-ZEu" secondAttribute="centerX" id="F00-aH-hSi"/>
-                            <constraint firstItem="m47-z0-XdJ" firstAttribute="trailing" secondItem="She-cF-1Ab" secondAttribute="trailingMargin" id="WgE-Kh-Z3s"/>
-                            <constraint firstItem="mVn-g8-86f" firstAttribute="leading" secondItem="She-cF-1Ab" secondAttribute="leadingMargin" constant="236" id="aF3-X3-pzW"/>
-                            <constraint firstItem="RMw-1w-fbD" firstAttribute="top" secondItem="mVn-g8-86f" secondAttribute="bottom" constant="117" id="cwR-Sy-XqY"/>
-                            <constraint firstItem="btO-yv-ZEu" firstAttribute="top" secondItem="m47-z0-XdJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fah-H8-fV8"/>
-                            <constraint firstItem="mVn-g8-86f" firstAttribute="top" secondItem="btO-yv-ZEu" secondAttribute="bottom" constant="43" id="krD-Au-FSR"/>
-                            <constraint firstItem="m47-z0-XdJ" firstAttribute="leading" secondItem="She-cF-1Ab" secondAttribute="leadingMargin" id="x4d-3n-32W"/>
-                            <constraint firstItem="btO-yv-ZEu" firstAttribute="centerX" secondItem="mVn-g8-86f" secondAttribute="centerX" id="xEL-xk-LDn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mVn-g8-86f" secondAttribute="trailing" constant="236" id="yjm-Ac-67Q"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="leading" secondItem="She-cF-1Ab" secondAttribute="leadingMargin" id="E0i-id-Wlm"/>
+                            <constraint firstItem="mVn-g8-86f" firstAttribute="top" secondItem="btO-yv-ZEu" secondAttribute="bottom" constant="43" id="N8H-iL-Gm9"/>
+                            <constraint firstItem="RMw-1w-fbD" firstAttribute="top" secondItem="mVn-g8-86f" secondAttribute="bottom" constant="117" id="Oe3-T1-aBy"/>
+                            <constraint firstItem="btO-yv-ZEu" firstAttribute="top" secondItem="m47-z0-XdJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ZgL-ia-z2v"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="trailing" secondItem="She-cF-1Ab" secondAttribute="trailingMargin" id="pMX-rC-mjD"/>
+                            <constraint firstItem="btO-yv-ZEu" firstAttribute="centerX" secondItem="mVn-g8-86f" secondAttribute="centerX" id="pYB-D1-meh"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="top" secondItem="MDm-nC-sCe" secondAttribute="bottom" constant="8" symbolic="YES" id="uNL-SE-cdY"/>
+                            <constraint firstItem="m47-z0-XdJ" firstAttribute="centerX" secondItem="btO-yv-ZEu" secondAttribute="centerX" id="zIr-aH-Yjx"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="hn2-EI-W1P"/>
                             <outletCollection property="gestureRecognizers" destination="orG-XO-CSO" appends="YES" id="P8C-7e-5ff"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="bLk-ZH-iMb">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="jaP-DR-LqE"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="XSd-wP-dIK"/>
+                    <navigationItem key="navigationItem" id="wvQ-4v-X5N">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="RWZ-Kc-OI7"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Eu7-CB-mek">
+                            <connections>
+                                <segue destination="D6L-og-2sl" kind="unwind" unwindAction="unwindToMealList:" id="jAD-wR-kgQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mealImageView" destination="btO-yv-ZEu" id="HcK-PW-b6f"/>
                         <outlet property="mealNameTextField" destination="m47-z0-XdJ" id="EVT-5w-CB6"/>
+                        <outlet property="saveButton" destination="Eu7-CB-mek" id="hif-do-pCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Wz-KF-ioN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="D6L-og-2sl" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="orG-XO-CSO">
                     <connections>
                         <action selector="selectImageFromPhotolibrary:" destination="a9B-BN-5as" id="P4i-pU-NkJ"/>
@@ -168,20 +171,20 @@
             <point key="canvasLocation" x="1348" y="380"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="xpq-tW-eWH">
+        <scene sceneID="Qcd-Rb-lJY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ozT-Kl-qyA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vhZ-LI-45T" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fAn-il-8cY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1m7-LO-5oy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="a9B-BN-5as" kind="relationship" relationship="rootViewController" id="NM1-03-Y7w"/>
+                        <segue destination="a9B-BN-5as" kind="relationship" relationship="rootViewController" id="R6n-9C-UEq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k62-ZX-lgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUg-Xl-O5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2893" y="380"/>
         </scene>
