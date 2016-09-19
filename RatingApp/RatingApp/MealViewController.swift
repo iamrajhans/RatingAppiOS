@@ -13,6 +13,9 @@ class MealViewController: UIViewController , UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var mealNameTextField: UITextField!
     @IBOutlet weak var mealImageView: UIImageView!
     
+    var meal :Meal?
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     override func viewDidLoad() {
         
     }
@@ -43,5 +46,15 @@ class MealViewController: UIViewController , UITextFieldDelegate, UIImagePickerC
         imagePicker.delegate = self
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender {
+            let name = mealNameTextField.text ?? ""
+            let photo = mealImageView.image
+            
+            meal = Meal(name: name, photo: photo, rating: 3)
+        }
+        
+    }
 }
-
