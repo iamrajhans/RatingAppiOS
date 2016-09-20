@@ -116,7 +116,7 @@ class MealTableViewController: UITableViewController {
         if let sourceViewCotroller = sender.sourceViewController as? MealViewController , meal =  sourceViewCotroller.meal{
             let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
             meals.append(meal)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
         }
     }
 

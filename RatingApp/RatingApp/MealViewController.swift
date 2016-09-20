@@ -57,4 +57,9 @@ class MealViewController: UIViewController , UITextFieldDelegate, UIImagePickerC
         }
         
     }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

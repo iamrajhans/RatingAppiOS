@@ -54,6 +54,7 @@
                                 <connections>
                                     <outlet property="mealImage" destination="gL0-z6-ftm" id="J2g-OR-zql"/>
                                     <outlet property="mealNameLabel" destination="b6y-F2-ZfY" id="qYf-Nq-gXD"/>
+                                    <segue destination="a9B-BN-5as" kind="show" identifier="ShowDetail" id="AYd-Tq-ZPl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,7 +129,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="wvQ-4v-X5N">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="RWZ-Kc-OI7"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="RWZ-Kc-OI7">
+                            <connections>
+                                <action selector="cancel:" destination="a9B-BN-5as" id="ohC-lK-Zct"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Eu7-CB-mek">
                             <connections>
                                 <segue destination="D6L-og-2sl" kind="unwind" unwindAction="unwindToMealList:" id="jAD-wR-kgQ"/>
@@ -186,10 +191,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUg-Xl-O5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2893" y="380"/>
+            <point key="canvasLocation" x="2919" y="742"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AYd-Tq-ZPl"/>
+    </inferredMetricsTieBreakers>
 </document>
