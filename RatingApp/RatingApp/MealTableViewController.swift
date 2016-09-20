@@ -101,22 +101,40 @@ class MealTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ShowDetail" {
+            let mealDetailController  = segue.destinationViewController as! MealViewController
+            if let selectedMealCell = sender as? MealTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedMealCell)!
+                let selectedMeal = meals[indexPath.row]
+                mealDetailController.meal = selectedMeal
+                
+            }
+            
+        }
     }
-    */
+    
     
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         
         if let sourceViewCotroller = sender.sourceViewController as? MealViewController , meal =  sourceViewCotroller.meal{
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing meal.
+                meals[selectedIndexPath.row] = meal
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
+            }
+            else {
             let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
             meals.append(meal)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
 

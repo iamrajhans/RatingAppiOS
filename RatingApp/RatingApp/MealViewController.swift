@@ -18,6 +18,13 @@ class MealViewController: UIViewController , UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var saveButton: UIBarButtonItem!
     override func viewDidLoad() {
         
+        mealNameTextField.delegate = self
+        if let meal = meal {
+            navigationItem.title = meal.name
+            mealNameTextField.text   = meal.name
+            mealImageView.image = meal.photo
+        }
+        
     }
     
     
