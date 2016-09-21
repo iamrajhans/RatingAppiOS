@@ -84,6 +84,14 @@ class MealTableViewController: UITableViewController {
             // Delete the row from the data source
          meals.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let alertUserController = UIAlertController(title: "Deleting Meal", message: "Meal is Deleted", preferredStyle: .Alert)
+            let alertUserCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            let alertUserok = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            
+            alertUserController.addAction(alertUserCancel)
+            alertUserController.addAction(alertUserok)
+            
+            presentViewController(alertUserController, animated: true, completion: nil)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
