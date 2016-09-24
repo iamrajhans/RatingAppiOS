@@ -151,12 +151,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="wvQ-4v-X5N">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="RWZ-Kc-OI7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RWZ-Kc-OI7">
                             <connections>
                                 <action selector="cancel:" destination="a9B-BN-5as" id="ohC-lK-Zct"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Eu7-CB-mek">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eu7-CB-mek">
                             <connections>
                                 <segue destination="D6L-og-2sl" kind="unwind" unwindAction="unwindToMealList:" id="jAD-wR-kgQ"/>
                             </connections>
