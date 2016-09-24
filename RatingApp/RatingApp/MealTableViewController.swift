@@ -139,7 +139,7 @@ class MealTableViewController: UITableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing meal.
                 meals[selectedIndexPath.row] = meal
-                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Bottom)
             }
             else {
             let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
